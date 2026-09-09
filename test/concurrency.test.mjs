@@ -58,7 +58,7 @@ function client(dataHome, key) {
 }
 
 test.skip("two processes, one data dir: every variant and every cover letter survives", async () => {
-  const key = "";
+  const key = execFileSync(process.execPath, [join(REPO, "scripts", "sign-license.mjs"), "resume"], { encoding: "utf8" }).trim();
   const sandbox = mkdtempSync(join(tmpdir(), "mcp-resume-conc-"));
   const dataHome = join(sandbox, "data");
   const a = client(dataHome, key);

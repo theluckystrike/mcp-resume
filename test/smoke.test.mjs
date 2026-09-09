@@ -176,7 +176,7 @@ test("stdio: initialize, tools/list, profile, resume, cover letter, tailoring", 
   assert.deepEqual(c.bad, [], `non-JSON on stdout: ${c.bad.join(" | ")}`);
 });
 
-test.skip("profile_set stores experience newest-first regardless of the order the caller sent it in", async (t) => {
+test("profile_set stores experience newest-first regardless of the order the caller sent it in", async (t) => {
   const c = client();
   t.after(() => c.close());
   await init(c);
