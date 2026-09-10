@@ -1,13 +1,45 @@
 # mcp-resume
 
+<!-- mirror-seo:start -->
+
+**MCP server for resume and cover letter writing, CV documents in Word format.** Resumes and cover letters as Word files from one profile, never invented.
+
+Works with Claude Desktop, Claude Code, Cursor and any Model Context Protocol client. Runs on your own machine, or hosted with no install.
+
+## Install
+
+**Hosted, nothing to install.** Point an MCP client at `https://mcp.zovo.one/mcp/resume` over streamable-http and send `Authorization: Bearer <token>`, where the token is a Pro key or a free anonymous one from <https://mcp.zovo.one/mcp/token>.
+
+**Claude Desktop, one click.** Download `resume.mcpb` from the [latest release](https://github.com/theluckystrike/mcp-servers/releases/latest) and double-click it.
+
+**From source.** The mirror is self-contained: every `@theluckystrike/*` dependency is vendored, so a fresh clone builds with no extra setup.
+
+```sh
+git clone https://github.com/theluckystrike/mcp-resume.git
+cd mcp-resume
+npm install && npm run build
+```
+
+Then point your client at the built entry point:
+
+```json
+{
+  "mcpServers": {
+    "resume": {
+      "command": "node",
+      "args": ["/absolute/path/to/mcp-resume/dist/index.js"]
+    }
+  }
+}
+```
+
+> `@theluckystrike/mcp-resume` is **not published on npm yet**, so an `npx -y @theluckystrike/mcp-resume` command will fail. The three paths above are the working ones and each is exercised by CI.
+
 ![resume demo](https://raw.githubusercontent.com/theluckystrike/mcp-servers/main/assets/demo-resume.gif)
-
-**One-click install:** download `resume.mcpb` from the [latest release](https://github.com/theluckystrike/mcp-servers/releases/latest) and double-click it in Claude Desktop.
-
-**Hosted endpoint (no install):** `https://mcp.zovo.one/mcp/resume` (streamable-http; send `Authorization: Bearer <Pro key or anonymous token from https://mcp.zovo.one/mcp/token>`).
 
 Read-only mirror of [mcp-servers/servers/resume](https://github.com/theluckystrike/mcp-servers/tree/main/servers/resume). See [MIRROR.md](MIRROR.md).
 
+<!-- mirror-seo:end -->
 
 Store your CV facts once. Then say "tailor my resume to this posting and write the cover letter" and get two real
 `.docx` files: a resume whose bullets are reordered by relevance to the posting, trimmed to fit the page count you
