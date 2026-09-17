@@ -1,6 +1,6 @@
 {
   "name": "mcp-resume",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "MCP server for resume and cover letter writing, CV documents in Word format. Resumes and cover letters as Word files from one profile, never invented.",
   "settings": [
     {
