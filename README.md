@@ -255,3 +255,5 @@ resume and contract letterheads. Set it once with `business_set` (invoice or doc
 repeat it anywhere else. An email address is only ever taken from that profile or from an explicit
 argument; when none is stored, documents show `[add: email]` and the tool says so rather than
 letting anyone improvise an address.
+
+**Listed on the [AI Product Index](https://index.percall.dev/l/zovo-resume.html)** — live remote endpoint at [mcp.zovo.one/s/resume](https://mcp.zovo.one/s/resume), free tier, no signup.
